@@ -8,9 +8,9 @@ const os = require('os');
 
 const storage = new Storage({keyFilename: 'serviceAccount.json'});
 const bucket = storage.bucket('gs://safe_route')
-const fileName = 'area_statistic.json'
+const fileName = 'area_statistics_neutered-2.json'
 const file = bucket.file(fileName)
-const destFileName = os.tmpdir()+ '/area_statistic.json'
+const destFileName = os.tmpdir()+ '/area_statistics_neutered-2.json'
 
 async function downloadFile() {
     const options = {
@@ -32,7 +32,7 @@ exports.getAllCoords = async(req, res) => {
   let seeked = req.body.subdistrict
   let obj = JSON.parse(fs.readFileSync(destFileName));
           
-  const expression = jsonata("statistic.coordinates")
+  const expression = jsonata("statistic")
   expression.assign("a", seeked)
     
   if (seeked = "All") {
