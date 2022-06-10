@@ -1,0 +1,29 @@
+{
+  "name": "return_all_subdistrict_coord",
+  "version": "1.0.0",
+  "description": "return all subdistrict name with coordinates for each",
+  "main": "index.js",
+  "scripts": {
+    "start": "functions-framework --target=getAllCoords",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/safe-route/cloud-computing/return_all_subdistrict_coord.git"
+  },
+  "keywords": [
+    "json",
+    "parse"
+  ],
+  "author": "c22-ps305",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/safe-route/cloud-computing/return_all_subdistrict_coord/issues"
+  },
+  "homepage": "https://gitlab.com/safe-route/cloud-computing/return_all_subdistrict_coord#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
+    "@google-cloud/storage": "^6.1.0",
+    "jsonata": "^1.8.6"
+  }
+}
